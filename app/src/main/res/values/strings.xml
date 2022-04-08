@@ -3,4 +3,8 @@
     <string name="online_or_offline">Online or Offline</string>
     <string name="online">Online</string>
     <string name="offline">Offline</string>
+    <string name="enter_player_name">Enter Player Name</string>
+    <string name="player_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="start_game">Start Game</string>
 </resources>

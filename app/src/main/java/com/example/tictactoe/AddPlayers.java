@@ -16,8 +16,8 @@ public class AddPlayers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_players);
 
-        final EditText playerOne = findViewById(R.id.PlayerOneName);
-        final EditText playerTwo = findViewById(R.id.PlayerTwoName);
+        final EditText playerOne = findViewById(R.id.playerOneName);
+        final EditText playerTwo = findViewById(R.id.playerTwoName);
         final Button startGameBtn = findViewById(R.id.startGameBtn);
 
         startGameBtn.setOnClickListener(new View.OnClickListener() {

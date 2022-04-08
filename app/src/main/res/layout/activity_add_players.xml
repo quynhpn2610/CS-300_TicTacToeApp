@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:text="Enter Player Name"
+        android:text="@string/enter_player_name"
         android:textStyle="bold"
         />
     <LinearLayout
@@ -35,12 +35,14 @@
             android:src="@drawable/x_icon"
             />
         <EditText
-            android:id="@+id/PlayerOneName"
+            android:inputType="text"
+            android:maxLines="1"
+            android:id="@+id/playerOneName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:hint="Player One"
+            android:hint="@string/player_one"
             android:textColorHint="@color/light_white"
             android:background="@color/dark_blue"
             android:textColor="#FFFFFF"
@@ -65,12 +67,14 @@
             android:src="@drawable/o_icon"
             />
         <EditText
-            android:id="@+id/PlayerTwoName"
+            android:inputType="text"
+            android:maxLines="1"
+            android:id="@+id/playerTwoName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:hint="Player Two"
+            android:hint="@string/player_two"
             android:textColorHint="@color/light_white"
             android:background="@color/dark_blue"
             android:textColor="#FFFFFF"
@@ -84,7 +88,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:text="Start Game"
+        android:text="@string/start_game"
         android:textColor="#FFFFFF"
         android:background="@drawable/round_back_blue1000"/>
 

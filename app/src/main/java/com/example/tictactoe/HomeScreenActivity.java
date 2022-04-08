@@ -23,7 +23,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         btnOffline = (Button) findViewById(R.id.btnOffline);
 
         // Button onClickListeners
-        btnOnline.setOnClickListener(new View.OnClickListener() {
+        btnOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(HomeScreenActivity.this, AddPlayers.class);
