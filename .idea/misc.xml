@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/layout/activity_home_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/offline_activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/win_dialog_layout.xml" value="0.13496376811594202" />
       </map>
     </option>
   </component>

@@ -88,6 +88,7 @@
         android:layout_marginBottom="50dp">
 
         <LinearLayout
+            android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -130,6 +131,7 @@
                 android:padding="20dp" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/layout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -172,6 +174,7 @@
                 android:padding="20dp" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/layout3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
