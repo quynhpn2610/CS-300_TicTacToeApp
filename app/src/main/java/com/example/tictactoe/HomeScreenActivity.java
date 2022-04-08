@@ -26,7 +26,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         btnOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(HomeScreenActivity.this, AddPlayers.class);
+                Intent i = new Intent(HomeScreenActivity.this, AddPlayers_Offline.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(i);

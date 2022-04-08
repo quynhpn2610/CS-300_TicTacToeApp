@@ -18,10 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddPlayers"
+            android:name=".AddPlayers_Offline"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity_Offline"
             android:exported="false" />
     </application>
 

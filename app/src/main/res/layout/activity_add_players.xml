@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/background"
-    tools:context=".AddPlayers">
+    tools:context=".AddPlayers_Offline">
 
     <TextView
         android:layout_width="wrap_content"

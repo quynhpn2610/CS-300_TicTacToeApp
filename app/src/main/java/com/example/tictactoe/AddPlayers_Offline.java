@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AddPlayers extends AppCompatActivity {
+public class AddPlayers_Offline extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,11 @@ public class AddPlayers extends AppCompatActivity {
                 final String getPlayerTwoName = playerTwo.getText().toString();
 
                 if(getPlayerOneName.isEmpty() || getPlayerTwoName.isEmpty()){
-                    Toast.makeText(AddPlayers.this, "Please enter player names", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddPlayers_Offline.this, "Please enter player names", Toast.LENGTH_SHORT).show();
                 }
                 else{
 
-                    Intent intent = new Intent(AddPlayers.this, MainActivity.class);
+                    Intent intent = new Intent(AddPlayers_Offline.this, MainActivity_Offline.class);
                     intent.putExtra("playerOne", getPlayerOneName);
                     intent.putExtra("playerTwo", getPlayerTwoName);
                     startActivity(intent);
