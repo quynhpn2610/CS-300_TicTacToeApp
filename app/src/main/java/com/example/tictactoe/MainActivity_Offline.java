@@ -147,7 +147,7 @@ public class MainActivity_Offline extends AppCompatActivity {
             imageView.setImageResource(R.drawable.x_icon);
 
             if (checkPlayerWin()){
-                WinDialog winDialog = new WinDialog(MainActivity_Offline.this, playerOneName.getText().toString() + "has won the match.", MainActivity_Offline.this);
+                WinDialog winDialog = new WinDialog(MainActivity_Offline.this, playerOneName.getText().toString() + " has won the match.", MainActivity_Offline.this);
                 winDialog.setCancelable(false);
                 winDialog.show();
                 }
