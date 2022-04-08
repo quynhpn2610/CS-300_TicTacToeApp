@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/round_back_blue1000.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/round_back_blue_border.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/round_back_purple.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_players.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
