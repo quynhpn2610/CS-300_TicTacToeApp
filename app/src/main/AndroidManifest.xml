@@ -23,6 +23,7 @@
         <activity
             android:name=".MainActivity_Offline"
             android:exported="false" />
+
     </application>
 
 </manifest>

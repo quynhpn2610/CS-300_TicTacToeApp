@@ -220,15 +220,15 @@ public class MainActivity_Offline extends AppCompatActivity {
 
         totalSelectedBoxes = 1;
 
-        image1.setBackgroundResource(R.drawable.transparent_back);
-        image2.setBackgroundResource(R.drawable.transparent_back);
-        image3.setBackgroundResource(R.drawable.transparent_back);
-        image4.setBackgroundResource(R.drawable.transparent_back);
-        image5.setBackgroundResource(R.drawable.transparent_back);
-        image6.setBackgroundResource(R.drawable.transparent_back);
-        image7.setBackgroundResource(R.drawable.transparent_back);
-        image8.setBackgroundResource(R.drawable.transparent_back);
-        image9.setBackgroundResource(R.drawable.transparent_back);
+        image1.setImageResource(R.drawable.transparent_back);
+        image2.setImageResource(R.drawable.transparent_back);
+        image3.setImageResource(R.drawable.transparent_back);
+        image4.setImageResource(R.drawable.transparent_back);
+        image5.setImageResource(R.drawable.transparent_back);
+        image6.setImageResource(R.drawable.transparent_back);
+        image7.setImageResource(R.drawable.transparent_back);
+        image8.setImageResource(R.drawable.transparent_back);
+        image9.setImageResource(R.drawable.transparent_back);
 
 
     }
