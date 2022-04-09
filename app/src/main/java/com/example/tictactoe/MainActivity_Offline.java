@@ -17,7 +17,6 @@ public class MainActivity_Offline extends AppCompatActivity {
     private int [] boxPositions = {0,0,0,0,0,0,0,0,0};
     private int playerTurn = 1;
     private int totalSelectedBoxes = 1;
-
     private LinearLayout playerOneLayout, playerTwoLayout;
     private TextView playerOneName, playerTwoName;
     private ImageView image1, image2, image3, image4, image5, image6, image7, image8, image9;
@@ -44,6 +43,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         image8 = findViewById(R.id.image8);
         image9 = findViewById(R.id.image9);
 
+        // Add winning combinations to the list
         combinationList.add(new int[]{0, 1, 2});
         combinationList.add(new int[]{3, 4, 5});
         combinationList.add(new int[]{6, 7, 8});
@@ -53,6 +53,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         combinationList.add(new int[]{0, 4, 8});
         combinationList.add(new int[]{2, 4, 6});
 
+        // Get players' name to put to the layout
         final String getPlayerOneName = getIntent().getStringExtra("playerOne");
         final String getPlayerTwoName = getIntent().getStringExtra("playerTwo");
 
@@ -141,6 +142,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         });
     }
 
+    // Control the game
     private void performAction(ImageView imageView, int selectedBoxPosition){
         boxPositions[selectedBoxPosition] = playerTurn;
         if (playerTurn == 1){
@@ -181,6 +183,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         }
     }
 
+    // Switch the layout when turns switched
     private void changePlayerTurn(int currentPlayerTurn){
         playerTurn = currentPlayerTurn;
         if (playerTurn == 1){
@@ -193,6 +196,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         }
     }
 
+    // Go through all combinations in combinationList and check if any combination met
     private boolean checkPlayerWin(){
         boolean response = false;
         for (int i = 0; i < combinationList.size(); i++) {
@@ -205,6 +209,7 @@ public class MainActivity_Offline extends AppCompatActivity {
         return response;
     }
 
+    // Allow a box to be selected if blank
     private boolean isBoxSelectable(int boxPosition){
         boolean response = false;
             if(boxPositions[boxPosition] == 0){
@@ -214,8 +219,9 @@ public class MainActivity_Offline extends AppCompatActivity {
     }
 
     public void restartMatch(){
+        // reset all position
         boxPositions = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
-
+        // reset player turn to player 1 (default)
         playerTurn = 1;
 
         totalSelectedBoxes = 1;
