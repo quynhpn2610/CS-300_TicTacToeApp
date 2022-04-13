@@ -27,8 +27,8 @@ public class WinDialog extends Dialog {
 
         setContentView(R.layout.win_dialog_layout);
 
-        final TextView messageTxt = findViewById(R.id.messageTxt);
-        final Button startAgainBtn = findViewById(R.id.startAgainBtn);
+        final TextView messageTxt = findViewById(R.id.messageTV);
+        final Button startAgainBtn = findViewById(R.id.startNewBtn);
 
         messageTxt.setText(message);
 
