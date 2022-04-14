@@ -3,7 +3,6 @@ package com.example.tictactoe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +26,7 @@ public class MainActivity_Offline extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.offline_activity_main);
+        setContentView(R.layout.activity_main);
 
 
         playerOneName = findViewById(R.id.playerOneName);
