@@ -32,9 +32,6 @@
             android:text="Start New Match"
             />
 
-
-
-
     </LinearLayout>
 
 </RelativeLayout>
