@@ -22,7 +22,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         btnOnline = (Button) findViewById(R.id.btnOnline);
         btnOffline = (Button) findViewById(R.id.btnOffline);
 
-        // Button onClickListeners
+        // Button Offline onClickListeners
         btnOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +33,15 @@ public class HomeScreenActivity extends AppCompatActivity {
             }
         });
 
-
+        // Button Online onClickListeners
+        btnOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeScreenActivity.this, OnlinePlayerName.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+            }
+        });
     }
 }

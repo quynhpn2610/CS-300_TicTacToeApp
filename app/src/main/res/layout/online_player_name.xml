@@ -43,5 +43,5 @@
         android:textColor="@color/dark_blue"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:id="@+id/startGameBtn"/>
+        android:id="@+id/startOnlineGameBtn"/>
 </LinearLayout>

@@ -1,10 +1,15 @@
 package com.example.tictactoe;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +21,13 @@ public class MainActivity_Online extends AppCompatActivity {
     // winning combinations
     private final List<int[]> combinationsList = new ArrayList<>();
     private final List<String> doneBoxes = new ArrayList<>(); // done boxes positions by users so users won't select the box again
+
+    // player unique Id
+    private String playerUniqueId = "0";
+
+    // getting firebase database reference
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://cs300tictactoe-default-rtdb.firebaseio.com/");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +52,30 @@ public class MainActivity_Online extends AppCompatActivity {
 
         // getting PlayerName from OnlinePlayerName file
         final String getPlayerName = getIntent().getStringExtra("playerName");
+
+        // generating winning combinations
+        combinationsList.add(new int[]{0,1,2});
+        combinationsList.add(new int[]{3,4,5});
+        combinationsList.add(new int[]{6,7,8});
+        combinationsList.add(new int[]{0,3,6});
+        combinationsList.add(new int[]{1,4,7});
+        combinationsList.add(new int[]{2,5,8});
+        combinationsList.add(new int[]{2,4,6});
+        combinationsList.add(new int[]{0,4,8});
+
+        // showing progress dialog while waiting for opponent
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Waiting for Opponent");
+        progressDialog.show();
+
+        // generate player unique id. Player will be identified by this id.
+        playerUniqueId = String.valueOf(System.currentTimeMillis());
+
+
+        // setting player name to the TextView
+        player1TV.setText(getPlayerName);
+
 
     }
 }
