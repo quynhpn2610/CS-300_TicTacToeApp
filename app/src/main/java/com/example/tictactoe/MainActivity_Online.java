@@ -5,10 +5,15 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +32,9 @@ public class MainActivity_Online extends AppCompatActivity {
 
     // getting firebase database reference
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://cs300tictactoe-default-rtdb.firebaseio.com/");
+
+    // whether opponent has been found
+    private boolean opponentFound = false;
 
 
     @Override
@@ -72,9 +80,20 @@ public class MainActivity_Online extends AppCompatActivity {
         // generate player unique id. Player will be identified by this id.
         playerUniqueId = String.valueOf(System.currentTimeMillis());
 
-
         // setting player name to the TextView
         player1TV.setText(getPlayerName);
+
+        databaseReference.child("connections").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
     }

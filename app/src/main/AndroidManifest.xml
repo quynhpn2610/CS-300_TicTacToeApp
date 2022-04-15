@@ -24,6 +24,9 @@
         <activity
             android:name=".MainActivity_Offline"
             android:exported="false" />
+        <activity
+            android:name=".OnlinePlayerName"
+            android:exported="false" />
 
     </application>
 
