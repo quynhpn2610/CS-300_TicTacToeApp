@@ -36,7 +36,6 @@ public class MainActivity_Online extends AppCompatActivity {
     // whether opponent has been found
     private boolean opponentFound = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +73,7 @@ public class MainActivity_Online extends AppCompatActivity {
         // showing progress dialog while waiting for opponent
         ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Waiting for Opponent");
+        progressDialog.setMessage("Looking for Opponent");
         progressDialog.show();
 
         // generate player unique id. Player will be identified by this id.
