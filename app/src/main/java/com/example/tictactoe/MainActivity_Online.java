@@ -45,6 +45,12 @@ public class MainActivity_Online extends AppCompatActivity {
     // player turn
     private String playerTurn = "";
 
+    // connection id
+    private String connectionId = "";
+
+    // Generating ValueEventListeners for firebase
+    ValueEventListener turnsEventListener, wonEventListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +107,7 @@ public class MainActivity_Online extends AppCompatActivity {
                         // check each connection to see if there are other users waiting
                         for(DataSnapshot connections: snapshot.getChildren()){
                             // get connection unique id
-                            long connectionId = Long.parseLong(connections.getKey());
+                            String conId = connections.getKey();
 
                             // if getPlayerCount = 1 -> other player is available, 2 -> connection is made
                             int getPlayerCount = (int)connections.getChildrenCount();
@@ -111,6 +117,32 @@ public class MainActivity_Online extends AppCompatActivity {
                                 if (getPlayerCount == 2){
                                     playerTurn = playerUniqueId;
                                     applyPlayerTurn(playerTurn);
+
+                                    // true when opponent found
+                                    boolean playerFound = false;
+
+                                    // getting players in connection
+                                    for (DataSnapshot players: connections.getChildren()){
+                                        String getPlayerUniqueId = players.getKey();
+
+                                        if (getPlayerUniqueId.equals(playerUniqueId)){
+                                            playerFound = true;
+                                        }
+                                        else if(playerFound){
+                                            String getOpponentPlayerName = players.child("player_name").getValue(String.class);
+                                            opponentUniqueId = players.getKey();
+
+                                            // set opponent playername to the text view
+                                            player2TV.setText(getOpponentPlayerName);
+
+                                            // assigning connection id
+                                            connectionId = conId;
+
+                                            opponentFound = true;
+
+                                            databaseReference.child("turns").child(connectionId).addValueEventListener(turnsEventListener);
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -132,6 +164,30 @@ public class MainActivity_Online extends AppCompatActivity {
 
             }
         });
+
+        turnsEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        };
+
+        wonEventListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        };
     }
 
     //
