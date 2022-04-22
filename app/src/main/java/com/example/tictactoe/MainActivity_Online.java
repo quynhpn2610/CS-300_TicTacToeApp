@@ -2,6 +2,8 @@ package com.example.tictactoe;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -200,5 +202,20 @@ public class MainActivity_Online extends AppCompatActivity {
             player2Layout.setBackgroundResource(R.drawable.round_back_blue_border);
             player1Layout.setBackgroundResource(R.drawable.round_back_dark_blue);
         }
+    }
+
+    // -------- ADDED MENUBAR, April 22 ---------------
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.exit_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.Exit) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -27,7 +27,8 @@
         <activity
             android:name=".OnlinePlayerName"
             android:exported="false" />
-
+        <activity android:name=".MainActivity_Online"
+            android:exported="false"/>
 
     </application>
 
