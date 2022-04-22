@@ -36,6 +36,15 @@ public class MainActivity_Online extends AppCompatActivity {
     // whether opponent has been found
     private boolean opponentFound = false;
 
+    // unique id for opponent
+    private String opponentUniqueId = "0";
+
+    // connection status (matching/waiting)
+    private String status = "matching";
+
+    // player turn
+    private String playerTurn = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +94,37 @@ public class MainActivity_Online extends AppCompatActivity {
         databaseReference.child("connections").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                // check if opponent found or not. If not then look for the opponent.
+                if(opponentFound){
+                    // check if there are others in firebase
+                    if(snapshot.hasChildren()){
+                        // check each connection to see if there are other users waiting
+                        for(DataSnapshot connections: snapshot.getChildren()){
+                            // get connection unique id
+                            long connectionId = Long.parseLong(connections.getKey());
 
+                            // if getPlayerCount = 1 -> other player is available, 2 -> connection is made
+                            int getPlayerCount = (int)connections.getChildrenCount();
+
+                            // after creating a new connection, wait for other to join
+                            if(status.equals("waiting")){
+                                if (getPlayerCount == 2){
+                                    playerTurn = playerUniqueId;
+                                    applyPlayerTurn(playerTurn);
+                                }
+                            }
+                        }
+                    }
+
+                    // if there is no one waiting in firebase, create new connection and waiting for opponent
+                    else{
+                        String connectionUniqueId = String.valueOf(System.currentTimeMillis());
+
+                        // add first player to the connection and wait for another to connect
+                        snapshot.child(connectionUniqueId).child(playerUniqueId).child("player_name").getRef().setValue(getPlayerName);
+                        status = "waiting";
+                    }
+                }
             }
 
             @Override
@@ -93,7 +132,17 @@ public class MainActivity_Online extends AppCompatActivity {
 
             }
         });
+    }
 
-
+    //
+    private void applyPlayerTurn(String playerUniqueId2){
+        if (playerUniqueId2.equals(playerUniqueId)){
+            player1Layout.setBackgroundResource(R.drawable.round_back_blue_border);
+            player2Layout.setBackgroundResource(R.drawable.round_back_dark_blue);
+        }
+        else{
+            player2Layout.setBackgroundResource(R.drawable.round_back_blue_border);
+            player1Layout.setBackgroundResource(R.drawable.round_back_dark_blue);
+        }
     }
 }
