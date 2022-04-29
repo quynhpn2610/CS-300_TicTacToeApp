@@ -499,7 +499,7 @@ public class MainActivity_Online extends AppCompatActivity {
         }
     }
 
-    // -------- ADDED MENUBAR, April 22 ---------------
+    // -------- ADDED MENU BAR, April 22 ---------------
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.exit_menu, menu);
