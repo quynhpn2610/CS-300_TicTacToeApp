@@ -252,7 +252,7 @@ public class MainActivity_Online extends AppCompatActivity {
                         final String getPlayerId = dataSnapshot.child("player_id").getValue(String.class);
 
                         // checking if user has not selected the box before
-                        if(doneBoxes.contains(String.valueOf((getBoxPosition)))){
+                        if(!doneBoxes.contains(String.valueOf((getBoxPosition)))){
 
                             // select the box
                             doneBoxes.add(String.valueOf(getBoxPosition));
@@ -341,8 +341,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("1") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("1");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("1");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -358,8 +358,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("2") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("2");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("2");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -375,8 +375,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("3") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("3");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("3");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -392,8 +392,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("4") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("4");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("4");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -409,8 +409,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("5") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("5");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("5");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -426,8 +426,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("6") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("6");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("6");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -443,8 +443,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("7") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("7");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("7");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -460,8 +460,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("8") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("8");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("8");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
@@ -477,8 +477,8 @@ public class MainActivity_Online extends AppCompatActivity {
                 if(doneBoxes.contains("9") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("box_position").setValue("9");
-                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() - 1)).child("player_id").setValue(playerUniqueId);
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("9");
+                    databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("player_id").setValue(playerUniqueId);
 
                     // change player turn
                     playerTurn = opponentUniqueId;
