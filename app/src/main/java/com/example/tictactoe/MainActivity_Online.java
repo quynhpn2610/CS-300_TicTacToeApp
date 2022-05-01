@@ -108,7 +108,7 @@ public class MainActivity_Online extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 // check if opponent found or not. If not then look for the opponent.
-                if(opponentFound){
+                if(!opponentFound){
                     // check if there are others in firebase
                     if(snapshot.hasChildren()){
                         // check each connection to see if there are other users waiting
@@ -156,7 +156,7 @@ public class MainActivity_Online extends AppCompatActivity {
                                                 progressDialog.dismiss();
                                             }
 
-                                            // once the connection had made remove connection from the Database Reference
+                                            // once the connection had made remove connection listener from the Database Reference
                                             databaseReference.child("connections").removeEventListener(this);
                                         }
                                     }
@@ -207,7 +207,7 @@ public class MainActivity_Online extends AppCompatActivity {
                         }
 
                         // check if opponent is found and user is not waiting for the opponent anymore then create a new connection
-                        if(!opponentFound && status.equals("waiting")){
+                        if(!opponentFound && !status.equals("waiting")){
 
                             // generating unique id for the connection
                             String connectionUniqueId = String.valueOf(System.currentTimeMillis());
