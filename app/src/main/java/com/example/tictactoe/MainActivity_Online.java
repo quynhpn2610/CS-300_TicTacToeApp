@@ -312,7 +312,11 @@ public class MainActivity_Online extends AppCompatActivity {
                         winDialogOnline = new WinDialogOnline(MainActivity_Online.this, "You won the game");
                     }
                     else {
+<<<<<<< HEAD
                         // show lose dialogue
+=======
+                        // show win dialogue
+>>>>>>> 95dbb21c0ab35384d9f271bd33f35127cdfab595
                         winDialogOnline = new WinDialogOnline(MainActivity_Online.this, "Opponent won the game");
                     }
 
@@ -529,7 +533,7 @@ public class MainActivity_Online extends AppCompatActivity {
 
         applyPlayerTurn(playerTurn);
 
-        // checking wheather player has won the match
+        // checking whether player has won the match
         if(checkPlayerWin(selectedByPlayer)){
 
             // sending won player unique id to firebase database wo opponent can be notified
