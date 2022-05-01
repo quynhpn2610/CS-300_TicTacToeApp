@@ -338,7 +338,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("1") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("1") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("1");
@@ -355,7 +355,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("2") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("2") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("2");
@@ -372,7 +372,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("3") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("3") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("3");
@@ -389,7 +389,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("4") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("4") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("4");
@@ -406,7 +406,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("5") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("5") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("5");
@@ -423,7 +423,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("6") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("6") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("6");
@@ -440,7 +440,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("7") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("7") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("7");
@@ -457,7 +457,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("8") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("8") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("8");
@@ -474,7 +474,7 @@ public class MainActivity_Online extends AppCompatActivity {
             public void onClick(View view) {
 
                 // check if the box is not selected before, and current user's turn
-                if(doneBoxes.contains("9") && playerTurn.equals(playerUniqueId)){
+                if(!doneBoxes.contains("9") && playerTurn.equals(playerUniqueId)){
                     ((ImageView)view).setImageResource(R.drawable.x_icon);
 
                     databaseReference.child("turns").child(connectionId).child(String.valueOf(doneBoxes.size() + 1)).child("box_position").setValue("9");
