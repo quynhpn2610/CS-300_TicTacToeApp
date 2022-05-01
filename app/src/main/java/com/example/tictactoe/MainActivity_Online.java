@@ -312,8 +312,8 @@ public class MainActivity_Online extends AppCompatActivity {
                         winDialogOnline = new WinDialogOnline(MainActivity_Online.this, "You won the game");
                     }
                     else {
-                        // show win dialogue
-                        winDialogOnline = new WinDialogOnline(MainActivity_Online.this, "You won the game");
+                        // show lose dialogue
+                        winDialogOnline = new WinDialogOnline(MainActivity_Online.this, "Opponent won the game");
                     }
 
                     winDialogOnline.setCancelable(false);
